@@ -8,7 +8,7 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 ================================================================= */
 
 // Set this once you deploy, e.g. "jargonbee.xyz" — it gets printed on the share image.
-const SHARE_URL = "";
+const SHARE_URL = "jargonbee.vercel.app";
 
 // OPTIONAL but recommended for launch — GUARANTEED pronunciation on every device.
 // Generate one audio clip per word (see generate_audio.py), host the folder, and set this.
@@ -379,10 +379,11 @@ export default function JargonBee() {
   function shareText() {
     const end = killer ? ` '${killer}' had me escorted out.` : "";
     return (
-      `JargonBee // Corporate Vocabulary Assessment\n` +
-      `I spelled ${spelled} buzzword${spelled === 1 ? "" : "s"} and reached ${finalRank().title}.${end}\n` +
-      `${verdict(spelled, won)}\n` +
-      (SHARE_URL ? `Play: ${SHARE_URL}` : `Think you can out-jargon me?`)
+   `I made it to ${finalRank().title}.\n\n` +
+`That means I spelled ${spelled} jargon terms before catastrophically failing at "${killer}".\n\n` +
+`${verdict(spelled, won)}\n\n` +
+`I'm now a cautionary tale. Prove you're smarter.\n\n` +
+`→ Play: ${SHARE_URL}`
     );
   }
 
