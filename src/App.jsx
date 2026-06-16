@@ -383,7 +383,7 @@ export default function JargonBee() {
 `That means I spelled ${spelled} jargon terms before catastrophically failing at "${killer}".\n\n` +
 `${verdict(spelled, won)}\n\n` +
 `I'm now a cautionary tale. Prove you're smarter.\n\n` +
-`→ Play: ${SHARE_URL}`
+`→ Play: https://${SHARE_URL}`
     );
   }
 
